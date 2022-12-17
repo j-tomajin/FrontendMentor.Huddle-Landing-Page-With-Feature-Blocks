@@ -1,3 +1,52 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
 @use '../utils/fonts' as font;
+
+body {
+    position: relative;
+}
+
+.min-max-width {
+    width: min(calc(100% - 60px), f.rem(1285));
+}
+
+.min-max-width-features {
+    width: min(calc(100% - 44px), f.rem(1285));
+}
+
+.margin-inline-auto {
+    margin-inline: auto;
+}
+
+.box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+// link
+.link-free {
+    background-color: var(--clr-primary);
+    color: white;
+    border-radius: 50px;
+    font-family: font.$open-sans;
+    font-weight: bold;
+}
+
+// fonts
+.open-sans {
+    font-family: font.$open-sans;
+    font-weight: 400;
+    color: var(--clr-neutral-500);
+}
+
+.open-sans-bold {
+    font-family: font.$open-sans;
+    font-weight: 700;
+    color: var(--clr-neutral-500);
+}
+
+h1, h2, h3, h4, h5, h6, 
+.link, .poppins {
+    font-family: font.$poppins;
+    font-weight: 600;
+    color: var(--clr-neutral-900);
+}
