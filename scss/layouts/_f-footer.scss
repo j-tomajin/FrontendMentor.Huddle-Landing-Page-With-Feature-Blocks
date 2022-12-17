@@ -2,6 +2,86 @@
 @use '../utils/functions' as f;
 /* FOOTER */
 
-footer {
+.footer {
     margin-top: auto;
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-neutral-200);
+    padding: 10.625rem 1rem 3.75rem;
+    padding: clamp(10.625rem, 10.18rem + 1.88vw, 11.875rem) 1rem 4rem;
+
+    &__container {
+        width: min(100%, f.rem(1245));
+
+        .info {
+            margin-bottom: f.rem(64);
+
+            .footer__logo {
+                margin-bottom: f.rem(32);
+            }
+
+            .location {
+                margin-bottom: f.rem(24);
+                width: min(100%, f.rem(380));
+    
+                p {
+                    margin-inline-start: f.rem(35);
+                }
+            }
+
+            .phone {
+                margin-bottom: f.rem(24);
+            }
+        }
+
+        .about-us {
+            margin-bottom: f.rem(16);
+        }
+
+        .career {
+            margin-bottom: f.rem(72);
+        }
+
+        .social-copyright {
+            a {
+                width: 35px;
+                height: 35px;
+                font-size: f.rem(18);
+                border: 1px solid var(--clr-neutral-200);
+                color: var(--clr-neutral-200);
+                border-radius: 50%;
+                transition: .3s ease;
+
+                &:hover {
+                    border: 1px solid var(--clr-primary);
+                    color: var(--clr-primary);
+                }
+            }
+        }
+    }
+}
+
+// community 
+.community {
+    width: min(calc(100% - 28px), f.rem(800));
+    background-color: var(--clr-neutral-200);
+    border-radius: f.rem(12);
+    text-align: center;
+
+    padding: f.rem(60) f.rem(16);
+
+    h3 {
+        font-size: 1.25rem;
+        font-size: clamp(1.25rem, 0.99rem + 1.13vw, 2rem);
+    }
+
+    &__link {
+        padding-block: 1.25rem;
+        padding-block: clamp(1.25rem, 0.99rem + 1.13vw, 2rem) ;
+
+        font-size: 1.125rem;
+        font-size: clamp(1.125rem, 0.99rem + 0.56vw, 1.5rem);
+
+        width: 15rem;
+        width: clamp(15rem, 11.48rem + 15.02vw, 25rem);    
+    }
 }
