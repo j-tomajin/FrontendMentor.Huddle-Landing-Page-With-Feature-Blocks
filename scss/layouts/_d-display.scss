@@ -1,3 +1,111 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
 /* DISPLAY */
+
+/* HEADER DISPLAY */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* MAIN HERO DISPLAY */
+.hero {
+    &__display {
+        display: grid;
+        grid-template-areas: 
+        'content'
+        'mockups';
+        gap: 4.25rem;
+        gap: clamp(4.25rem, 3.67rem + 2.47vw, 4.875rem);
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem;
+            gap: clamp(2.5rem, 1.92rem + 2.47vw, 3.125rem);
+        }
+    }
+
+    // media query 920px - large screen(utils - breakpoints)
+}
+
+/* SECTION FEATURES DISPLAY */
+.features {
+    &__display {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: f.rem(45);
+
+        .features__card {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: f.rem(74);
+        }
+    }
+
+    // media query - 720px / medium-screen
+}
+
+.footer {
+    .community {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 2.75rem;
+        gap: clamp(2.75rem, 2.3098591549295775rem + 1.8779342723004695vw, 4rem);
+    }
+
+    &__display {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+
+        .social-copyright {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: f.rem(16);
+
+            .socials {
+                display: flex;
+                align-items: center;
+                gap: f.rem(12);
+
+                a {
+                    display: grid;
+                    place-items: center;
+                }
+            }
+        }
+    }
+
+    .info {
+        .phone,
+        .email {
+            display: flex;
+            align-items: center;
+            gap: f.rem(16);
+        }
+    }
+}
+
+.flex-group {
+    display: flex;
+    flex-direction: column;
+    gap: f.rem(16);
+
+    a {
+        color: white;
+    }
+}
+
+// temporary display
+// .header,
+// .hero,
+// .features {
+//     display: none;
+// }
