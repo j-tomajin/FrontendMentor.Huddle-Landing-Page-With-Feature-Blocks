@@ -1,3 +1,62 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
 /* POSITION */
+
+/* HEADER POSITION */
+.header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* FOOTER POSITION */
+.footer {
+    position: relative;
+
+    .community {
+        position: absolute;
+        top: -200px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include bp.breakpointMin(medium-screen) {
+            top: -220px;
+        }
+    }
+
+    
+    .attribution { 
+        position: absolute;
+        bottom: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center; 
+        color: var(--clr-neutral-500);
+
+        font-size: 0.75rem;
+        font-size: clamp(0.75rem, 0.66rem + 0.56vw, 1.125rem);
+
+        a { 
+            color: white; 
+        }
+    }
+}
+
+.footer {
+    &__position {
+        .info {
+            position: relative;
+
+            .location {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 5px;
+                    left: 2.5px;
+                }
+            }
+        }
+    }
+}
