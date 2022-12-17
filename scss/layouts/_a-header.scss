@@ -1,3 +1,21 @@
 @use '../utils/breakpoints' as bp;
 @use '../utils/functions' as f;
 /* HEADER */
+
+.header {
+    padding-top: 2rem;
+    padding-top: clamp(2rem, 0.386rem + 6.91vw, 3.75rem);
+
+    &__logo {
+        width: 7.8125rem;
+        width: clamp(7.8125rem, 4.92rem + 12.35vw, 10.9375rem);
+    }
+
+    &__link {
+        font-size: 0.875rem;
+        font-size: clamp(0.875rem, 0.81rem + 0.28vw, 1.0625rem);
+        padding: f.rem(8) f.rem(24);
+        padding: clamp(0.5rem, 0.46rem + 0.19vw, 0.625rem) clamp(1.5rem, 1.32rem + 0.75vw, 2rem);
+        border-radius: 50px;
+    }
+}
