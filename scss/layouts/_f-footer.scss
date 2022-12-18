@@ -9,8 +9,17 @@
     padding: 10.625rem 1rem 3.75rem;
     padding: clamp(10.625rem, 10.18rem + 1.88vw, 11.875rem) 1rem 4rem;
 
+    &__logo,
     &__container {
         width: min(100%, f.rem(1245));
+    }
+
+    &__logo {
+        margin-bottom: 2.125rem;
+        margin-bottom: clamp(2.125rem, 0.8348623853211008rem + 5.5045871559633035vw, 4rem);
+    }
+
+    &__container {
 
         .info {
             margin-bottom: f.rem(64);
@@ -30,6 +39,15 @@
 
             .phone {
                 margin-bottom: f.rem(24);
+            }
+        }
+
+        .about-us,
+        .career {
+            a:hover {
+                text-decoration-line: underline;
+                text-decoration-thickness: 1.5px;
+                text-decoration-color: white;
             }
         }
 
@@ -58,12 +76,29 @@
             }
         }
     }
+
+    @include bp.breakpointMin(large-screen) {
+        &__container {
+
+            .info, .about-us, .career {
+                margin-bottom: 0;
+            }
+
+            .about-us, .career {
+                margin-inline: auto;
+            }
+
+            // .social-copyright {
+            //     margin-top: 60px;
+            // }
+        }
+    }
 }
 
 // community 
 .community {
     width: min(calc(100% - 28px), f.rem(800));
-    background-color: var(--clr-neutral-200);
+    background-color: white;
     border-radius: f.rem(12);
     text-align: center;
 
@@ -75,8 +110,8 @@
     }
 
     &__link {
-        padding-block: 1.25rem;
-        padding-block: clamp(1.25rem, 0.99rem + 1.13vw, 2rem) ;
+        padding-block: 1rem;
+        padding-block: clamp(1rem, 0.66rem + 1.47vw, 1.5rem);
 
         font-size: 1.125rem;
         font-size: clamp(1.125rem, 0.99rem + 0.56vw, 1.5rem);
