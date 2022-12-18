@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6,
 }
 .footer__logo {
   margin-bottom: 2.125rem;
-  margin-bottom: clamp(2.125rem, 0.8348623853rem + 5.504587156vw, 4rem);
+  margin-bottom: clamp(2.125rem, 0.83rem + 5.5vw, 4rem);
 }
 .footer__container .info {
   margin-bottom: 4rem;
