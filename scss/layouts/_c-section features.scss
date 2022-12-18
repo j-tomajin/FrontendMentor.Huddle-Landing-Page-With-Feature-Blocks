@@ -24,6 +24,15 @@
                     margin-bottom: f.rem(24);
                 }
             }
+
+            // media query - 920px - large screen
+            @include bp.breakpointMin(large-screen) {
+                text-align: left;
+
+                .features__content {
+                    margin-block: auto;
+                }
+            }
         }
     }
 }
