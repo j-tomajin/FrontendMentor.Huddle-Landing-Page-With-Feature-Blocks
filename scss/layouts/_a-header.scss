@@ -12,6 +12,7 @@
     }
 
     &__link {
+        background-color: white;
         font-size: 0.875rem;
         font-size: clamp(0.875rem, 0.81rem + 0.28vw, 1.0625rem);
         padding: f.rem(8) f.rem(24);
